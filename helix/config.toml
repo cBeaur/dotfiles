@@ -1,1 +1,6 @@
 theme = "everforest-dark-medium"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"

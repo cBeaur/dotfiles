@@ -17,8 +17,8 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            layout "us,ca"
+            options "grp:win_space_toggle"
 
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
@@ -83,7 +83,7 @@ blur {
 }
 
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
     //opacity 0.9
@@ -148,10 +148,10 @@ output "HDMI-A-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@143.999"
+    mode "3840x2160@59.997"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
+    scale 2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -166,14 +166,14 @@ output "HDMI-A-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=0
+    position x=1920 y=0
 }
 
 output "DP-1" {
-    mode "3840x2160@59.997"
-    scale 2
+    mode "1920x1080@143.999"
+    scale 1
     transform "normal"
-    position x=1920 y=0
+    position x=0 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -181,7 +181,7 @@ output "DP-1" {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
